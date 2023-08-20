@@ -1,7 +1,8 @@
 # WordPress-Deployment-Assignment 
    
 [https://wpwebsiteproject.ddns.net/](https://wpwebsiteproject.ddns.net/)
-
+![wpwebsiteproject ddns net](https://github.com/Omkar0070/WordPress-Deployment-Assignment/assets/103347564/491676f4-c899-4a28-8f23-fac3d87cb755)
+![deploystatus](https://github.com/Omkar0070/WordPress-Deployment-Assignment/assets/103347564/1547528c-750c-4003-94bc-1165bb663754)
 # 🚀 Automated WordPress Deployment using LEMP Stack and GitHub Actions 🚀
  
 Welcome to a step-by-step guide on setting up an automated deployment pipeline for your WordPress website using the powerful LEMP stack (Linux, Nginx, MySQL, PHP) on an AWS EC2 instance. And that's not all – we're integrating the magic of GitHub Actions to make this process as smooth as possible.
@@ -15,7 +16,6 @@ To embark on this exciting journey, you'll need a few things in place:
 - **GitHub Account:** You'll need a GitHub account for version control and collaborative magic.
 
 ## 🚀 Server Provisioning on AWS
-
 ```shell
 # Launch an EC2 Instance:
 # Choose an Ubuntu 22.04 AMI to start.
@@ -106,6 +106,7 @@ location ~* \.(js|css|png|jpg|jpeg|gif|ico)$ {
     expires max;
     log_not_found off;
 }
+ 
 
 **🚚 GitHub Actions Workflow Setup**
 
@@ -191,15 +192,11 @@ ssh ubuntu@$SERVER_IP "cd $REMOTE_DIR && \
 Safeguard Secrets using GitHub Repository Secrets:
 
 Go to "Settings" > "Secrets" > "New repository secret".
-Create secrets like SSH_PRIVATE_KEY and DB_PASSWORD.
+Create secrets like SSH_PRIVATE_KEY  
 Commit and Push Your Workflow:
 Commit and push deploy.yml to your repository. GitHub Actions will trigger on pushes to the main branch.
-
-![wpwebsite](images/wpwebsiteproject.ddns.net.png)
-
 
 **Congratulations!  successfully set up an automated deployment pipeline for your WordPress website using the LEMP stack, Nginx, and GitHub Actions. Your website is now ready to shine on the web.**
 
 https://wpwebsiteproject.ddns.net/
   
-
