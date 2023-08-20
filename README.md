@@ -3,7 +3,7 @@
 [https://wpwebsiteproject.ddns.net/](https://wpwebsiteproject.ddns.net/)
 
 # 🚀 Automated WordPress Deployment using LEMP Stack and GitHub Actions 🚀
-
+ 
 Welcome to a step-by-step guide on setting up an automated deployment pipeline for your WordPress website using the powerful LEMP stack (Linux, Nginx, MySQL, PHP) on an AWS EC2 instance. And that's not all – we're integrating the magic of GitHub Actions to make this process as smooth as possible.
 
 ## 📋 Prerequisites
