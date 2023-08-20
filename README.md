@@ -3,6 +3,15 @@
 [https://wpwebsiteproject.ddns.net/](https://wpwebsiteproject.ddns.net/)
 ![wpwebsiteproject ddns net](https://github.com/Omkar0070/WordPress-Deployment-Assignment/assets/103347564/491676f4-c899-4a28-8f23-fac3d87cb755)
 ![deploystatus](https://github.com/Omkar0070/WordPress-Deployment-Assignment/assets/103347564/1547528c-750c-4003-94bc-1165bb663754)
+## Local Environment Setup
+
+Follow these steps to set up your local development environment:
+
+1. Clone the repository to your local machine:
+   ```bash
+   git clone https://github.com/Omkar0070/WordPress-Deployment-Assignment.git
+   cd WordPress-Deployment-Assignment
+   
 # 🚀 Automated WordPress Deployment using LEMP Stack and GitHub Actions 🚀
  
 Welcome to a step-by-step guide on setting up an automated deployment pipeline for your WordPress website using the powerful LEMP stack (Linux, Nginx, MySQL, PHP) on an AWS EC2 instance. And that's not all – we're integrating the magic of GitHub Actions to make this process as smooth as possible.
@@ -35,7 +44,8 @@ sudo apt update && sudo apt upgrade -y
 sudo apt install nginx mysql-server php-fpm php-mysql -y
 
 **🎉 WordPress Installation and Configuration**
- ```shell
+
+```shell
 # Securely Configure MySQL:
 # Tighten up MySQL and set up your database:
 sudo mysql_secure_installation
@@ -54,6 +64,7 @@ sudo cp -a /tmp/wordpress/.  /var/www/html
 sudo chown -R www-data:www-data /var/www/html/
 
 **Set up your wp-config.php with the database details.**
+
 
 **⚙️ Nginx Configuration**
 
