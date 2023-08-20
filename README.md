@@ -195,6 +195,9 @@ Create secrets like SSH_PRIVATE_KEY and DB_PASSWORD.
 Commit and Push Your Workflow:
 Commit and push deploy.yml to your repository. GitHub Actions will trigger on pushes to the main branch.
 
+![wpwebsite](images/wpwebsiteproject.ddns.net.png)
+
+
 **Congratulations!  successfully set up an automated deployment pipeline for your WordPress website using the LEMP stack, Nginx, and GitHub Actions. Your website is now ready to shine on the web.**
 
 https://wpwebsiteproject.ddns.net/
