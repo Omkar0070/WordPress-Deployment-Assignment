@@ -1,0 +1,40 @@
+name: Deploy to EC2
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          ssh-keyscan -t rsa 3.230.213.39 >> ~/.ssh/known_hosts
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Install dependencies
+        run: |
+          sudo apt update && sudo apt install -y \
+            nginx mysql-client
+          # Add your specific dependency installation and build commands here
+
+      - name: Transfer files to server
+        run: |
+          scp -o StrictHostKeyChecking=no -r * ubuntu@3.230.213.39:/var/www/html/
+
+      - name: Run deployment script on server
+        run: |
+          ssh ubuntu@3.230.213.39  '/var/www/html/deploy_script.sh'  
+      - name: Restart services on server
+        run: |
+          ssh ubuntu@3.230.213.39 "sudo systemctl restart nginx"
